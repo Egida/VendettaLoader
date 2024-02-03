@@ -12,5 +12,5 @@
  * Build Size: 4kb✅
  * Self-Detele:✅
 
-## ✨ End
-<strong>Thanks for watching</strong>
+⚠️ Disclaimer:
+<strong>This project for education and purposes only!</strong>
