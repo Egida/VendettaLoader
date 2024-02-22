@@ -52,7 +52,6 @@ namespace SimplyProgram
 
             var processStartInfo = new ProcessStartInfo()
             {
-                Verb = "runas", // If the program is an administrator permissions, then running CMD is also an administrator permissions
                 FileName = "cmd",
                 UseShellExecute = false,
                 CreateNoWindow = true, // If you need to hide the window, set it to TRUE, you will not display the window
