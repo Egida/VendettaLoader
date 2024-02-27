@@ -41,6 +41,8 @@
             this.minimazeBtn = new System.Windows.Forms.PictureBox();
             this.closeBtn = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.afterPayload_Name = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimazeBtn)).BeginInit();
@@ -52,19 +54,21 @@
             this.urlexeBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
             this.urlexeBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.urlexeBox.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.urlexeBox.ForeColor = System.Drawing.Color.White;
-            this.urlexeBox.Location = new System.Drawing.Point(75, 96);
+            this.urlexeBox.ForeColor = System.Drawing.Color.LightGreen;
+            this.urlexeBox.Location = new System.Drawing.Point(76, 73);
             this.urlexeBox.Multiline = true;
             this.urlexeBox.Name = "urlexeBox";
             this.urlexeBox.Size = new System.Drawing.Size(231, 25);
             this.urlexeBox.TabIndex = 3;
+            this.urlexeBox.Text = "https://hello.xyz/payload.exe";
+            this.urlexeBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(118, 51);
+            this.label1.Location = new System.Drawing.Point(118, 40);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(155, 30);
             this.label1.TabIndex = 4;
@@ -77,7 +81,7 @@
             this.cmdBox.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.cmdBox.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdBox.ForeColor = System.Drawing.Color.LightGreen;
-            this.cmdBox.Location = new System.Drawing.Point(79, 216);
+            this.cmdBox.Location = new System.Drawing.Point(76, 234);
             this.cmdBox.Name = "cmdBox";
             this.cmdBox.ReadOnly = true;
             this.cmdBox.Size = new System.Drawing.Size(231, 99);
@@ -95,7 +99,7 @@
             this.buildBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buildBtn.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buildBtn.ForeColor = System.Drawing.Color.Black;
-            this.buildBtn.Location = new System.Drawing.Point(113, 334);
+            this.buildBtn.Location = new System.Drawing.Point(123, 339);
             this.buildBtn.Name = "buildBtn";
             this.buildBtn.Size = new System.Drawing.Size(143, 38);
             this.buildBtn.TabIndex = 6;
@@ -108,8 +112,8 @@
             this.filenameBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
             this.filenameBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.filenameBox.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.filenameBox.ForeColor = System.Drawing.Color.White;
-            this.filenameBox.Location = new System.Drawing.Point(76, 171);
+            this.filenameBox.ForeColor = System.Drawing.Color.LightGreen;
+            this.filenameBox.Location = new System.Drawing.Point(76, 137);
             this.filenameBox.Multiline = true;
             this.filenameBox.Name = "filenameBox";
             this.filenameBox.Size = new System.Drawing.Size(231, 25);
@@ -122,11 +126,11 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(138, 135);
+            this.label2.Location = new System.Drawing.Point(99, 104);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(116, 30);
+            this.label2.Size = new System.Drawing.Size(167, 30);
             this.label2.TabIndex = 8;
-            this.label2.Text = "FILENAME";
+            this.label2.Text = "OUT-FILENAME";
             // 
             // statusLabel
             // 
@@ -200,12 +204,39 @@
             this.panel1.Size = new System.Drawing.Size(392, 10);
             this.panel1.TabIndex = 11;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Transparent;
+            this.label3.Location = new System.Drawing.Point(96, 165);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(177, 30);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "PAYLOAD-NAME";
+            // 
+            // afterPayload_Name
+            // 
+            this.afterPayload_Name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(20)))), ((int)(((byte)(22)))));
+            this.afterPayload_Name.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.afterPayload_Name.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.afterPayload_Name.ForeColor = System.Drawing.Color.LightGreen;
+            this.afterPayload_Name.Location = new System.Drawing.Point(76, 198);
+            this.afterPayload_Name.Multiline = true;
+            this.afterPayload_Name.Name = "afterPayload_Name";
+            this.afterPayload_Name.Size = new System.Drawing.Size(231, 25);
+            this.afterPayload_Name.TabIndex = 12;
+            this.afterPayload_Name.Text = "afterDownloadPayloadName.exe";
+            this.afterPayload_Name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(7)))), ((int)(((byte)(6)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
             this.ClientSize = new System.Drawing.Size(392, 400);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.afterPayload_Name);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.statusLabel);
@@ -247,6 +278,8 @@
         private System.Windows.Forms.Label statusLabel;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox afterPayload_Name;
     }
 }
 
