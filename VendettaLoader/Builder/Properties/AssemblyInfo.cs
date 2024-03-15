@@ -5,13 +5,13 @@ using System.Runtime.InteropServices;
 // Общие сведения об этой сборке предоставляются следующим набором
 // набора атрибутов. Измените значения этих атрибутов для изменения сведений,
 // связанных со сборкой.
-[assembly: AssemblyTitle("VendettaLoader Version 2.0")]
-[assembly: AssemblyDescription("VendettaLoader Version 2.0")]
+[assembly: AssemblyTitle("VendettaLoader Version 3.0 by k3rnel-dev")]
+[assembly: AssemblyDescription("VendettaLoader Version 3.0 by k3rnel-dev")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("VendettaLoader Version 2.0")]
-[assembly: AssemblyProduct("VendettaLoader Version 2.0")]
-[assembly: AssemblyCopyright("Copyright ©KernelIndustry  2024")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCompany("VendettaLoader Version 3.0 by k3rnel-dev")]
+[assembly: AssemblyProduct("VendettaLoader Version 3.0 by k3rnel-dev")]
+[assembly: AssemblyCopyright("VendettaLoader Version 3.0 by k3rnel-dev")]
+[assembly: AssemblyTrademark("VendettaLoader Version 3.0 by k3rnel-dev")]
 [assembly: AssemblyCulture("")]
 
 // Установка значения False для параметра ComVisible делает типы в этой сборке невидимыми

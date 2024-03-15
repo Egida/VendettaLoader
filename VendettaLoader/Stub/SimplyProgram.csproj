@@ -7,7 +7,7 @@
     <ProjectGuid>{CA8A70D7-9829-451A-A527-93E32D49D142}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>SimplyProgram</RootNamespace>
-    <AssemblyName>MicrosoftDownloader</AssemblyName>
+    <AssemblyName>WMIRegistrationServ</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -25,11 +25,11 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugType>pdbonly</DebugType>
+    <DebugType>none</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
+    <ErrorReport>none</ErrorReport>
     <WarningLevel>0</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>

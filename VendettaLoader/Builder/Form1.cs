@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
-using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,6 +10,10 @@ namespace VendettaLoader
 {
     public partial class Form1 : Form
     {
+        private bool isDragging = false;
+        private Point lastCursor;
+        private Point lastForm;
+
         public Form1()
         {
             InitializeComponent();
@@ -27,13 +27,6 @@ namespace VendettaLoader
         private void minimazeBtn_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
-        }
-
-        private void Form1_MouseDown(object sender, MouseEventArgs e)
-        {
-            this.Capture = false;
-            var msg = Message.Create(this.Handle, 0xa1, new IntPtr(2), IntPtr.Zero);
-            this.WndProc(ref msg);
         }
 
         private async void buildBtn_Click(object sender, EventArgs e)
@@ -84,7 +77,7 @@ namespace VendettaLoader
                     {
                         string ilasmArguments = $"/output={exeOutputPath} {tempFilePath}";
 
-                        var processInfo = new System.Diagnostics.ProcessStartInfo(ilasmPath, ilasmArguments)
+                        var processInfo = new ProcessStartInfo(ilasmPath, ilasmArguments)
                         {
                             UseShellExecute = false,
                             RedirectStandardOutput = true,
@@ -136,12 +129,41 @@ namespace VendettaLoader
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://github.com/k3rnel-dev");
+           Process.Start("https://github.com/k3rnel-dev");
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://github.com/k3rnel-dev");
+            About aboutForm = new About();
+            aboutForm.Show();
+        }
+
+        private void topPanel_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                isDragging = true;
+                lastCursor = Cursor.Position;
+                lastForm = Location;
+            }
+        }
+
+        private void topPanel_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                isDragging = false;
+            }
+        }
+
+        private void topPanel_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (isDragging)
+            {
+                int deltaX = Cursor.Position.X - lastCursor.X;
+                int deltaY = Cursor.Position.Y - lastCursor.Y;
+                Location = new Point(lastForm.X + deltaX, lastForm.Y + deltaY);
+            }
         }
     }
 }

@@ -1,18 +1,22 @@
 # Vendetta Loader
 ![CSHARP](https://img.shields.io/badge/Language-CSHARP-aqua?style=for-the-badge&logo=CS)
-![](bannr.png)
+![](banner.png)
 
 ## 📑 About
-</b>VLoader 2.0 PE-Files on C#</b>
-<strong>Most simple loader exe files, this program have builder for crafting stubs.</strong>
+<b>VLoader 3.0 PE-Files on C#
+<br>Most-simple loader exe files, this program have builder for building stubs.</b>
 
-![](scren.png)
-### 🦀Features:
- * Changelog: 27/02/2024
- * Build Size: 9kb✅
+![](screen.png)
+### 🐊Features:
+ * Build Size: 10kb✅
  * Self-Detele:✅
  * AntiVM: ✅
  * Anti-AnyRun: ✅
+ 
+### 📗 Updates:
+ * Changelog: 15/03/2024
+ * Fix stub
+ * Changed gui 
 
 ⚠️ Disclaimer:
 <strong>This project for education and purposes only!</strong>
